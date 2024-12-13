@@ -1,5 +1,5 @@
 # 13/12 
-Första mötet tillsammans
+Första mötet tillsammans! 
 - Vi gör gruppkontrakt
 - Vi skapar projekt i Jira.
 Länk till Jira: https://grupp-estelle.atlassian.net/jira/software/projects/GEQ/boards/1 
