@@ -20,11 +20,12 @@
 - Roligt: HTML och semantik, CSS/Sass, funktioner & logik i js, tillgänglighet
 - Tråkigt: Installera saker, terminal--> Vite, ESlint, Prettier, SEO
 - Vi försöker göra conventional commits på engelska och använder gitmojis om möjligt ex--> type[optional scope]: description
-- Vi använder camelCase i js och id, kebab-case i klasser och CSS 
+- Vi använder camelCase i js och id, kebab-case i klasser och CSS
 - Vi gör commits för en sak i taget, commitar när något är färdigt eller när vi behöver avsluta
 - Om ni märker att ni hamnar efter/före i planeringen--> I slutet av veckan har vi en utvärdering, planerar nästa veckas arbete och kan be om hjälp om man inte hinner med sitt ansvarsområde.
 
-Att fylla i senare: 
+Att fylla i senare:
+
 - vilken linting- och prettier-konfiguration ni kör
 - hur ni hanterar att göra-listan/backlogen: products backlog, sprint backlog
-- hur er tidsplan ser ut (deadline 10/1), vad ni har för milstolpar  
+- hur er tidsplan ser ut (deadline 10/1), vad ni har för milstolpar
