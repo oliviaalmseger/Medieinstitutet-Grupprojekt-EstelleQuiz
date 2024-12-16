@@ -1,3 +1,16 @@
+## 16/12
+Andra mötet
+-Vi installerar dev dependencies, eslint, prettier etc.
+-Vi bestämmer ledighet över jul, vi är lediga 23-26december. Vi träffas 27 december
+30 december som vanligt (tea är borta)
+31 december morgonmöte 
+2-3januari som vanligt igen
+
+- Vi gör wireframe/mindmap via Miro, flödesschema, kom-ihåg-anteckningar, grafisk profil och wireframe för mobil och desktop
+- Vi tar fram 20 quizfrågor- tema film
+- Vi skapar array för quizet, i js än sålänge
+- Vi tittar på typescript till vårt möte tisdag 17/12
+
 # 13/12
 
 Första mötet tillsammans!
