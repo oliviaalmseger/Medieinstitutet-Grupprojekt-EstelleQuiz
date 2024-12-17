@@ -1,3 +1,14 @@
+### 17/12
+- Vi fortsätter med planering av quizet.
+- Vi skapar vår backlogg, lägger upp tasks med subtasks i Jira och lägger ut storypoint
+-Vi bokar handledning med Jenny för att fråga om slumpade frågor. Hon förklarar att det är bäst att ha en array med quiz-frågor och att dessa har en boolean som true/false om den har visats under spelets omgång.
+- Vi bestämmer att vi ska ha en funktion för att starta spelet som anropar andra funktioner i spelet, för att ha tydligare organisering i koden. 
+- Vi kollar fonter
+
+Att göra imorrn: 
+- Lägga upp en första sprintplanering
+- Färdigställ kontrakt
+
 ## 16/12
 Andra mötet
 -Vi installerar dev dependencies, eslint, prettier etc.
