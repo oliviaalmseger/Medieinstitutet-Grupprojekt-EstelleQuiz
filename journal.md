@@ -4,10 +4,14 @@
 -Vi bokar handledning med Jenny för att fråga om slumpade frågor. Hon förklarar att det är bäst att ha en array med quiz-frågor och att dessa har en boolean som true/false om den har visats under spelets omgång.
 - Vi bestämmer att vi ska ha en funktion för att starta spelet som anropar andra funktioner i spelet, för att ha tydligare organisering i koden. 
 - Vi kollar fonter
+-Vi kollar om det är möjligt att bestämma tid för demo 30:e december eftersom Tea jobbar
 
 Att göra imorrn: 
 - Lägga upp en första sprintplanering
 - Färdigställ kontrakt
+-Sätta upp branches
+-Html struktur
+- Array för quizfrågor
 
 ## 16/12
 Andra mötet
