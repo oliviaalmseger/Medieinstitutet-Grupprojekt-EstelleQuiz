@@ -1,3 +1,17 @@
+#### 18/12
+- Vi träffas och fortsätter med sprintplanering, lägger upp första sprinten. 
+
+- Vi stöter på problem med github commits och branches, och lyckas lösa det tillsammans!!
+
+- Vi överger fibonaci-skalan och gör en egen skala. Estelle-skalan:
+1p = halv dag
+2p = 1 heldag
+4p = 2 heldagar
+
+
+
+- Vi börjar med HTML-strukturen som vi vill ha
+
 ### 17/12
 - Vi fortsätter med planering av quizet.
 - Vi skapar vår backlogg, lägger upp tasks med subtasks i Jira och lägger ut storypoint
@@ -68,3 +82,16 @@ ops Commits, that affect operational components like infrastructure, deployment,
 chore Miscellaneous commits e.g. modifying .gitignore
 
 - Exempel på commit: "feat(shopping cart): add the amazing button"
+
+## skapa branches
+
+Använd passande prefix och beskriv branchens funktion
+
+exempel--> "feature/add-user-authentication"
+
+feature/: För nya funktioner eller förbättringar.
+bugfix/: För att fixa buggar.
+hotfix/: För akuta ändringar i produktion.
+experiment/: För att testa idéer eller nya tekniker.
+chore/: För underhåll eller ändringar som inte påverkar funktionaliteten, som uppdateringar av dependencies eller dokumentation.
+release/: För att förbereda en release.
