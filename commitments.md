@@ -23,9 +23,13 @@
 - Vi använder camelCase i js och id, kebab-case i klasser och CSS
 - Vi gör commits för en sak i taget, commitar när något är färdigt eller när vi behöver avsluta
 - Om ni märker att ni hamnar efter/före i planeringen--> I slutet av veckan har vi en utvärdering, planerar nästa veckas arbete och kan be om hjälp om man inte hinner med sitt ansvarsområde.
+- Vi gör backlog och sprintplanering tillsammans i vårt projekt i Jira
+- Tidsplan: sprint 1 innehåller majoritet av koden, skall vara färdig 27 december, sprint 2 innehåller bekräftelsesida, final fixes,testning, validering samt eventuella tillägg. Vi är helst klara 7 januari för att kunna planera presentation och genomföra egen reflektionsuppgift.
+- linting- och prettier-konfiguration: vi använder camelCase, trailing commas, Require curly braces for all control statements, varning för console.log, single quotes, tabwidth = 4, semi-kolon tas bort om valfritt.
 
-Att fylla i senare:
-
-- vilken linting- och prettier-konfiguration ni kör
-- hur ni hanterar att göra-listan/backlogen: products backlog, sprint backlog
-- hur er tidsplan ser ut (deadline 10/1), vad ni har för milstolpar
+## Underskrifter
+@LcNyaker
+@oliviaalmseger
+@mainforce
+@Valentin-dot-com
+@TeaGross
