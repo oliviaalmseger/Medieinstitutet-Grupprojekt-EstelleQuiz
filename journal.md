@@ -1,4 +1,5 @@
 #### 18/12
+Heldagsmöte
 - Vi träffas och fortsätter med sprintplanering, lägger upp första sprinten. 
 
 - Vi stöter på problem med github commits och branches, och lyckas lösa det tillsammans!!
@@ -8,9 +9,20 @@
 2p = 1 heldag
 4p = 2 heldagar
 
+- Vi börjar med och slutför HTML-strukturen  vi vill ha i projektet, skapar en ny branch för html-base-skeleton och commitar grunden där. Vi diskuterar hur vi tänker/ tidigare erfarenheter och kommer överens om bästa tillvägagångssätt tex för containers i html som ska användas i typescript. 
 
+- Vi gör scss-setup med olika filer för variables, mobile, desktop, normalize etc och länkar in media queries för rätt skärmstorlek. 
 
-- Vi börjar med HTML-strukturen som vi vill ha
+- vi färdigställer vårt gruppkontrakt och skriver under 
+
+- Vi gör quiz array i egen modul och importerar den i main.ts 
+
+- Vi välkomar Lenita in i gruppen!! och går igenom vårt projekt tillsammans. 
+
+Imorgon:
+- Kl 14:00 info om Jaqueline
+- Vi sitter till 15.45 
+- 
 
 ### 17/12
 - Vi fortsätter med planering av quizet.
@@ -23,8 +35,7 @@
 Att göra imorrn: 
 - Lägga upp en första sprintplanering
 - Färdigställ kontrakt
--Sätta upp branches
--Html struktur
+- Html struktur
 - Array för quizfrågor
 
 ## 16/12
