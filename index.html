@@ -47,13 +47,68 @@
   "language": "sv"
 }
 </script>
-
 </head>
-
 <body>
-  <h1>Hej och hå och hejdå</h1>
-  <h2>Hej allihop /Moa /Valentin was here</h2>
-  <div id="app"></div>
+  <!--Landing page-->
+  <section id="landingPage" class="landing-page">
+    <h1>Quizza med Estelle</h1>
+    <label>
+      <span>Skriv ditt namn här:</span>
+      <input id="usernameInput" type="text">
+    </label>
+    <button id="startGameBtn">Starta spelet</button> 
+  </section>
+
+  <!--Main page: GAME-->
+  <main id="gamePage" class="game-page">
+    <header>
+      <img src="#" alt="Vår logga">
+    </header>
+
+    <div id="progressTopContainer" class="progress-top-container">
+      <span id="timeSpan"></span>
+      <span id="progressBarSpan"></span>
+    </div>
+
+    <div id="questionContainer" class="question-container">
+      <p id="questionParagraph" class="question-paragraph"></p>
+    </div>
+
+    <div id="optionsContainer" class="options-container">
+      <label>
+        <span id="optionOne"></span>
+        <input id="optionOneInput" type="radio" name="answer" required>
+      </label>
+      <label>
+        <span id="optionTwo"></span>
+        <input id="optionTwoInput" type="radio" name="answer">
+      </label>
+      <label>
+        <span id="optionThree"></span>
+        <input id="optionThreeInput" type="radio" name="answer">
+      </label>
+      <button id="lockAnswerBtn">Lås ditt svar</button>
+    </div>
+
+    <div id="onwardContainer">
+      <button id="onwardBtn">Gå vidare</button>
+    </div>
+
+  </main>
+
+  <!--Result page-->
+  <section id="resultPage" class="result-page">
+    <h2>Resultat</h2>
+    <div class="result-text-container">
+      <p id="resultParagraph" class="result-paragraph"></p>
+    </div>
+
+    <div class="result-page-btns-container">
+      <button id="playAgainBtn" class="play-again-btn">Spela igen</button>
+      <button id="quitGameBtn" class="quit-game-btn">Avsluta</button>
+    </div>
+  </section>
+  
   <script type="module" src="/src/main.ts"></script>
 </body>
 
