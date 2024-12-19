@@ -1,10 +1,10 @@
 import "../css/style.scss";
 import quizQuestionsArray from "./quizArray.ts";
+import * as myQuestionBox from "./question-box.ts";
 
 quizQuestionsArray.forEach(index => {
     console.log(index.options);
 });
-
 
 /*************************** Landing page ****************************/
 //variabel för username
@@ -18,7 +18,7 @@ const startGameBtn = document.querySelector('#startGameBtn') as HTMLButtonElemen
 // klickevent på starta spel
 startGameBtn.addEventListener('click', startGame);
 
-function startGame() {
+export function startGame() {
 
     username = usernameInput.value;
     if (username.length === 0) {
@@ -34,4 +34,5 @@ function startGame() {
     // funktion: Starta poängräkning
     // funktion: starta + visa frågeräkning
     // funktion: visa frågor + svarsalternativ
+    myQuestionBox.showQuestion();
 }
