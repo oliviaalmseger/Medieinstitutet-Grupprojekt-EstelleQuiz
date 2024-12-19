@@ -1,3 +1,10 @@
+# 19/12
+Standup 
+Dagens plan: Dela ut arbetsuppgifter
+- Valentin och Ludde tar sig an frågelådan
+- Tea, Olivia och Moa tar sig an timern i progressbar och lägger in logga i headern.
+
+
 #### 18/12
 Heldagsmöte
 - Vi träffas och fortsätter med sprintplanering, lägger upp första sprinten. 
