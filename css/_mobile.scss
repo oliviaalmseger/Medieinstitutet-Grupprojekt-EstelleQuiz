@@ -1,0 +1,12 @@
+body{
+    .landing-page,
+    .game-page, 
+    .result-page{
+        border: 2px solid blue;
+        margin-bottom: 10px;
+    }
+    
+    .hidden{
+        display: none;
+    }
+}
