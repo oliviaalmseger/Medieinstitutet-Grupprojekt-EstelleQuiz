@@ -8,6 +8,7 @@ export const lockAnswerBtn = document.querySelector('#lockAnswerBtn') as HTMLBut
 export const onwardBtn = document.querySelector('#onwardBtn') as HTMLButtonElement;
 onwardBtn.addEventListener('click', showQuestion);
 
+// TODO: flytta denna till rätt modul, användes här bara för att testa att den byter frågor
 export const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButtonElement;
 playAgainBtn.addEventListener('click', playAgain)
 
@@ -15,43 +16,45 @@ export let currentQuestionIndex = 0;
 
 let isFirstArray = true;
 
+// Funktion för att slumpa fram ordningen på arrayen (Baserad på Fisher-Yates Sorting Algorithm)
+function shuffleArray<T>(array: T[]) {
+    const shuffled = [...array];
 
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
 
-// export function chooseQuestions() {
-//     const firstArray = quizQuestionsArray.slice(0, 9);
-//     const secondArray = quizQuestionsArray.slice(10,19);
-// }
+    return shuffled;
+}
 
-export function showQuestion() {
+export function showQuestion(): void {
     questionParagraph.innerHTML = '';
-    const firstArray = quizQuestionsArray.slice(0, 9);
-    const secondArray = quizQuestionsArray.slice(10,19);
-    console.log(currentQuestionIndex);
-    
-    // TODO: Kom tillbaka och fixa denna, efter 10 frågor har visats
-    if (currentQuestionIndex > 9) {
-        alert('du har nått slutet');
+    const firstArray = quizQuestionsArray.slice(0, 10); // Räknar från index 0 till och med (men exklusive) 10, alltså tar den index 0-9
+    const secondArray = quizQuestionsArray.slice(10,20); // Samma som ovan fast tar index 10-19
+
+    const firstArrayShuffled = shuffleArray(firstArray);
+    const secondArrayShuffled = shuffleArray(secondArray);
+
+    if (currentQuestionIndex === 10) {
+        alert('Du har nu svarat på alla frågor');
+        console.log('Du har visat alla frågor')
+        // TODO: lägg till att kalla på funktion för att visa bekräftelse-sida
         return;
     }
     if (isFirstArray) {
-        questionParagraph.innerHTML = `${firstArray[currentQuestionIndex].question}`;
+        questionParagraph.innerHTML = `${firstArrayShuffled[currentQuestionIndex].question}`;
         currentQuestionIndex += 1;
     }
     else {
-        questionParagraph.innerHTML = `${secondArray[currentQuestionIndex].question}`;
+        questionParagraph.innerHTML = `${secondArrayShuffled[currentQuestionIndex].question}`;
         currentQuestionIndex += 1;
     }
 }
 
-export function playAgain() {
+// TODO: Som med variabeln för knappen, flytta till rätt modul. användes bara som test.
+export function playAgain(): void {
     isFirstArray = !isFirstArray;
     currentQuestionIndex = 0;
     startGame();
 }
-
-/* När vi trycker på spela igen knappen:
-
-    isFirstArray = !isFirstArray;
-    currentQuestionIndex = 0;
-    startGame();
-*/ 

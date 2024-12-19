@@ -1,10 +1,13 @@
 import "../css/style.scss";
-import quizQuestionsArray from "./quizArray.ts";
-import * as myQuestionBox from "./question-box.ts";
 
-quizQuestionsArray.forEach(index => {
-    console.log(index.options);
-});
+// Vet inte om vi behöver quizArrayen i vår main? -> Den är en kommentar så länge
+// import quizQuestionsArray from "./quizArray.ts";
+import * as questionBox from "./question-box.ts";
+
+// Denna kan vi ta bort om vi tar bort quizArray import eller om quizArray används nån annanstans
+// quizQuestionsArray.forEach(index => {
+//     console.log(index.options);
+// });
 
 /*************************** Landing page ****************************/
 //variabel för username
@@ -34,5 +37,5 @@ export function startGame() {
     // funktion: Starta poängräkning
     // funktion: starta + visa frågeräkning
     // funktion: visa frågor + svarsalternativ
-    myQuestionBox.showQuestion();
+    questionBox.showQuestion();
 }
