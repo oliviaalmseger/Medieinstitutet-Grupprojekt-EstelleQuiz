@@ -1,5 +1,5 @@
-import quizQuestionsArray from "./quizArray.ts";
-import { startGame } from "./main.ts";
+import quizQuestionsArray from './quizArray.ts';
+import { startGame } from './main.ts';
 
 export const questionParagraph = document.querySelector('#questionParagraph') as HTMLElement;
 
@@ -10,7 +10,7 @@ onwardBtn.addEventListener('click', showQuestion);
 
 // TODO: flytta denna till rätt modul, användes här bara för att testa att den byter frågor
 export const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButtonElement;
-playAgainBtn.addEventListener('click', playAgain)
+playAgainBtn.addEventListener('click', playAgain);
 
 export let currentQuestionIndex = 0;
 
@@ -28,25 +28,24 @@ function shuffleArray<T>(array: T[]) {
     return shuffled;
 }
 
+const firstArray = quizQuestionsArray.slice(0, 10); // Räknar från index 0 till och med (men exklusive) 10, alltså tar den index 0-9
+const secondArray = quizQuestionsArray.slice(10, 20); // Samma som ovan fast tar index 10-19
+
+const firstArrayShuffled = shuffleArray(firstArray);
+const secondArrayShuffled = shuffleArray(secondArray);
+
 export function showQuestion(): void {
     questionParagraph.innerHTML = '';
-    const firstArray = quizQuestionsArray.slice(0, 10); // Räknar från index 0 till och med (men exklusive) 10, alltså tar den index 0-9
-    const secondArray = quizQuestionsArray.slice(10,20); // Samma som ovan fast tar index 10-19
-
-    const firstArrayShuffled = shuffleArray(firstArray);
-    const secondArrayShuffled = shuffleArray(secondArray);
 
     if (currentQuestionIndex === 10) {
         alert('Du har nu svarat på alla frågor');
-        console.log('Du har visat alla frågor')
         // TODO: lägg till att kalla på funktion för att visa bekräftelse-sida
         return;
     }
     if (isFirstArray) {
         questionParagraph.innerHTML = `${firstArrayShuffled[currentQuestionIndex].question}`;
         currentQuestionIndex += 1;
-    }
-    else {
+    } else {
         questionParagraph.innerHTML = `${secondArrayShuffled[currentQuestionIndex].question}`;
         currentQuestionIndex += 1;
     }
