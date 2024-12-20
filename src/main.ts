@@ -1,5 +1,6 @@
 import '../css/style.scss'
 import * as questionBox from './question-box.ts'
+import * as progressTop from './progress-top.ts'
 
 /*************************** Landing page ****************************/
 //variabel för username
@@ -28,7 +29,7 @@ export function startGame() {
 
     landingPage.classList.add('hidden')
 
-    startTimer()
+    progressTop.startTimer()
 
     // Anropa: starta timer + visa timer
     // Glöm inte att timer ska stoppa när klickar "gå vidare" efter fråga 10.
@@ -38,51 +39,3 @@ export function startGame() {
 
     questionBox.showQuestion()
 }
-
-/*************************** Timer function (progress-top) ****************************/
-
-let timeInSeconds: number = 0 // Nollställ tiden
-let timerInterval: number | null = null //
-const timeSpan = document.querySelector('#timeSpan') as HTMLSpanElement
-/* let timeResult // Variabel för timerresultatet */
-
-function formatTime(seconds: number): string {
-    const min = String(Math.floor(seconds / 60)).padStart(2, '0')
-    const sec = String(seconds % 60).padStart(2, '0')
-    return `${min}:${sec}`
-}
-
-function startTimer() {
-    if (timerInterval !== null) {
-        clearInterval(timerInterval)
-    }
-    timeInSeconds = 0
-    updateTimerSpan()
-
-    timerInterval = setInterval(timerCount, 1000)
-}
-
-function timerCount() {
-    timeInSeconds++ //Ökar med 1 sekund
-    updateTimerSpan()
-}
-function updateTimerSpan() {
-    timeSpan.innerHTML = formatTime(timeInSeconds)
-}
-
-/* Förberett för att använda senare, STOPPAR timern (knapp: Avsluta) 
-// Byt knapp
-
-const quitGameBtn = document.querySelector('#quitGameBtn') as HTMLElement
-
-quitGameBtn.addEventListener('click', stopTimer)
-
-function stopTimer() {
-    if (timerInterval !== null) {
-        clearInterval(timerInterval)
-    }
-    timeResult = formatTime(timeInSeconds)
-    console.log(timeResult)
-}
-
-*/

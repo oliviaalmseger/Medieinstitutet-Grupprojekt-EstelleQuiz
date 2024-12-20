@@ -1,5 +1,6 @@
 import quizQuestionsArray from './quizArray.ts';
 import { startGame } from './main.ts';
+import { stopTimer, timeResult } from './progress-top.ts';
 
 export const questionParagraph = document.querySelector('#questionParagraph') as HTMLElement;
 
@@ -13,6 +14,7 @@ export const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButto
 playAgainBtn.addEventListener('click', playAgain);
 
 export let currentQuestionIndex = 0;
+let progressBarSpan = document.querySelector('#progressBarSpan') as HTMLElement;
 
 let isFirstArray = true;
 
@@ -21,12 +23,12 @@ function shuffleArray<T>(array: T[]) {
     const shuffled = [...array];
 
     for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
+        const j = Math.floor(Math.random() * (i + 1)); 
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
-
+ 
     return shuffled;
-}
+} 
 
 const firstArray = quizQuestionsArray.slice(0, 10); // Räknar från index 0 till och med (men exklusive) 10, alltså tar den index 0-9
 const secondArray = quizQuestionsArray.slice(10, 20); // Samma som ovan fast tar index 10-19
@@ -38,16 +40,23 @@ export function showQuestion(): void {
     questionParagraph.innerHTML = '';
 
     if (currentQuestionIndex === 10) {
-        alert('Du har nu svarat på alla frågor');
+        alert('Du har nu svarat på alla frågor'); 
+        stopTimer();
+        console.log(timeResult); 
         // TODO: lägg till att kalla på funktion för att visa bekräftelse-sida
         return;
     }
     if (isFirstArray) {
         questionParagraph.innerHTML = `${firstArrayShuffled[currentQuestionIndex].question}`;
         currentQuestionIndex += 1;
+        console.log(currentQuestionIndex);
+        progressBarSpan.innerHTML = `Fråga: ${currentQuestionIndex} / 10`;
     } else {
         questionParagraph.innerHTML = `${secondArrayShuffled[currentQuestionIndex].question}`;
         currentQuestionIndex += 1;
+        console.log(currentQuestionIndex);
+        progressBarSpan.innerHTML = `Fråga: ${currentQuestionIndex} / 10`;
+        console.log("Nu drar vi igång runda två!")
     }
 }
 
@@ -57,3 +66,4 @@ export function playAgain(): void {
     currentQuestionIndex = 0;
     startGame();
 }
+
