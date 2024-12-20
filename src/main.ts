@@ -28,7 +28,7 @@ export function startGame() {
     console.log('Användarnamn: ' + username)
 
     landingPage.classList.add('hidden')
-    gamePage.classList.remove('hidden')
+    questionBox.gamePage.classList.remove('hidden')
 
     progressTop.startTimer()
 
