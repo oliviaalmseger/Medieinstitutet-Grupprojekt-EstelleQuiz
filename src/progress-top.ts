@@ -27,7 +27,7 @@ function timerCount() {
 function updateTimerSpan() {
     timeSpan.innerHTML = formatTime(timeInSeconds)
 }
-
+ 
 // Förberett för att använda senare, STOPPAR timern (knapp: Avsluta)
 // Byt knapp
 
@@ -40,6 +40,4 @@ export function stopTimer() {
         clearInterval(timerInterval)
     }
     timeResult = formatTime(timeInSeconds)
-}
-
-/*************************** Progress (progress-top) ****************************/
+} 
