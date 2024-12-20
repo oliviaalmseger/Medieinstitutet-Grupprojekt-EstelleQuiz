@@ -1,3 +1,16 @@
+# 20/12
+- Vi beslutar att ändra regeln om semikolon.
+- Vi visar vad vi gjort igår, gör pull request, löser konflikter och mergar.
+- Lenita tar sig an styling, illustrerar bilder.
+Dagens agenda:
+  - Olivia, Moa, Tea tar sig an progress bar
+  - Lenita gör styling
+  - Valentin och ludde tar sig an svarsalternativ
+
+  Hinder:
+  - Inte tillräckligt med kaffepauser
+  - Vi är ostoppbara!
+
 # 19/12
 Standup 
 Dagens plan: Dela ut arbetsuppgifter
