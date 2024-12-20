@@ -1,5 +1,6 @@
 import quizQuestionsArray from './quizArray.ts';
 import { startGame } from './main.ts';
+import { stopTimer, timeResult } from './progress-top.ts';
 
 export const questionParagraph = document.querySelector('#questionParagraph') as HTMLElement;
 
@@ -21,10 +22,10 @@ function shuffleArray<T>(array: T[]) {
     const shuffled = [...array];
 
     for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
+        const j = Math.floor(Math.random() * (i + 1)); 
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
-
+ 
     return shuffled;
 }
 
@@ -39,6 +40,8 @@ export function showQuestion(): void {
 
     if (currentQuestionIndex === 10) {
         alert('Du har nu svarat på alla frågor');
+        stopTimer();
+        console.log(timeResult);
         // TODO: lägg till att kalla på funktion för att visa bekräftelse-sida
         return;
     }
