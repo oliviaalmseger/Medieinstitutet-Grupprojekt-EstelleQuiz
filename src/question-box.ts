@@ -18,7 +18,7 @@ export const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButto
 playAgainBtn.addEventListener('click', playAgain);
 
 export let currentQuestionIndex = 0;
-let progressBarSpan = document.querySelector('#progressBarSpan') as HTMLElement;
+const progressBarSpan = document.querySelector('#progressBarSpan') as HTMLElement;
 
 
 let isFirstArray = true;
@@ -185,7 +185,7 @@ function showResultPage() {
 
     if(score < 2) {
         resultMessage = '<strong>Regissörens mardröm</strong>- Aj då! Du verkar ha missat de flesta filmerna. Kanske en filmkväll med klassiker är på sin plats?'
-    } else if (score === 2 && score === 3) {
+    } else if (score === 2 || score === 3) {
         resultMessage = '<strong>Filmupptäckare</strong>-Du är på väg att hitta dina favoritfilmer – dags att dyka ner i några filmklassiker!'
     } else if (score >= 4 && score <= 6) {
         resultMessage = '<strong>Popcornproffs</strong>-Inte illa! Du missar några detaljer, men du är klart på väg mot en Oscarsvinst i filmkunskap!'
