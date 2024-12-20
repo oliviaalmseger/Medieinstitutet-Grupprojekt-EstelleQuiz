@@ -1,9 +1,26 @@
 body{
+    max-width: 1000px;
+    margin: 0 auto;
+
+    background-color: $primarycolor; 
+    
+
     .landing-page,
     .game-page, 
     .result-page{
         border: 2px solid blue;
         margin-bottom: 10px;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        img {
+            width: 20vw;
+            height: auto;
+            min-width: 250px;
+        }
     }
     
     .hidden{
