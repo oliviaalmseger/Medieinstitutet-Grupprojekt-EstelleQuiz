@@ -1,4 +1,5 @@
 import '../css/style.scss'
+import * as questionBox from './question-box.ts'
 
 /*************************** Landing page ****************************/
 //variabel för username
@@ -17,14 +18,13 @@ const startGameBtn = document.querySelector(
 startGameBtn.addEventListener('click', startGame)
 
 export function startGame() {
-
-    username = usernameInput.value;
+    username = usernameInput.value
     if (username.length === 0) {
         alert('Du måste ange ett användarnamn!')
         return
     }
 
-    console.log('Användernamn: ' + username)
+    console.log('Användarnamn: ' + username)
 
     landingPage.classList.add('hidden')
 
@@ -35,8 +35,8 @@ export function startGame() {
     // funktion: Starta poängräkning
     // funktion: starta + visa frågeräkning
     // funktion: visa frågor + svarsalternativ
-  
-    questionBox.showQuestion();
+
+    questionBox.showQuestion()
 }
 
 /*************************** Timer function (progress-top) ****************************/
