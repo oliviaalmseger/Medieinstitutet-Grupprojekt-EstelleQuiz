@@ -138,10 +138,12 @@ function checkAnswer() {
     // Uppdaterar variabeln "score" utifrån om vi svarat rätt eller fel
     if (isAnswerCorrect === 'true') {
         score += 1;
+        // TODO: Byt till en span istället för questionParagraph + töm/rensa denna vid ny fråga också
         questionParagraph.innerHTML = 'Du svarade rätt!';
     }
     else {
         score += 0;
+        // TODO: Byt till en span istället för questionParagraph
         questionParagraph.innerHTML = 'Du svarade fel!';
     }
 
@@ -204,7 +206,7 @@ function showResultPage(): void {
     } else if (score === 10){
         resultMessage = '<strong>Filmgeni</strong>-Wow! Du är ett levande filmlexikon – Spielberg ringer nog snart för tips!'
     } else {
-        console.log('Något blev fel med poängsystemet');
+        resultMessage = 'Nu vart det fel, hmmm';
     }
 
     resultParagraph.innerHTML = `

@@ -30,8 +30,6 @@ function startGame() {
         return;
     }
 
-    console.log('Användarnamn: ' + username);
-
     landingPage.classList.add('hidden');
     questionBox.gamePage.classList.remove('hidden');
 
