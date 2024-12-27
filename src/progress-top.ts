@@ -1,16 +1,18 @@
 /*************************** Timer function (progress-top) ****************************/
+export {timeResult, startTimer, stopTimer}
+
 
 let timeInSeconds: number = 0 // Nollställ tiden
 let timerInterval: number | null = null //
 const timeSpan = document.querySelector('#timeSpan') as HTMLSpanElement
-export let timeResult: string // Variabel för timerresultatet
+let timeResult: string // Variabel för timerresultatet
 
 function formatTime(seconds: number): string {
     const min = String(Math.floor(seconds / 60)).padStart(2, '0')
     const sec = String(seconds % 60).padStart(2, '0')
     return `${min}:${sec}`
 }
-export function startTimer() {
+function startTimer() {
     if (timerInterval !== null) {
         clearInterval(timerInterval)
     }
@@ -35,7 +37,7 @@ function updateTimerSpan() {
 
 // quitGameBtn.addEventListener('click', stopTimer)
 
-export function stopTimer() {
+function stopTimer() {
     if (timerInterval !== null) {
         clearInterval(timerInterval)
     }

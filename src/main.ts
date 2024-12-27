@@ -1,3 +1,4 @@
+export {startGame}
 import '../css/style.scss'
 import * as questionBox from './question-box.ts'
 import * as progressTop from './progress-top.ts'
@@ -18,7 +19,7 @@ const startGameBtn = document.querySelector(
 // klickevent på starta spel
 startGameBtn.addEventListener('click', startGame)
 
-export function startGame() {
+function startGame() {
     username = usernameInput.value
     if (username.length === 0) {
         alert('Du måste ange ett användarnamn!')

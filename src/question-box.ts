@@ -1,23 +1,24 @@
+export {gamePage, showQuestion}
 import quizQuestionsArray from './quizArray.ts';
 import { startGame } from './main.ts';
 import { stopTimer, timeResult } from './progress-top.ts';
 
 
-export const questionParagraph = document.querySelector('#questionParagraph') as HTMLElement;
+const questionParagraph = document.querySelector('#questionParagraph') as HTMLElement;
 
-export const lockAnswerBtn = document.querySelector('#lockAnswerBtn') as HTMLButtonElement;
+const lockAnswerBtn = document.querySelector('#lockAnswerBtn') as HTMLButtonElement;
 lockAnswerBtn.addEventListener('click', checkAnswer)
 
-export const onwardBtn = document.querySelector('#onwardBtn') as HTMLButtonElement;
+const onwardBtn = document.querySelector('#onwardBtn') as HTMLButtonElement;
 onwardBtn.addEventListener('click', showQuestion);
-export const gamePage = document.querySelector('#gamePage') as HTMLElement
+const gamePage = document.querySelector('#gamePage') as HTMLElement
 const resultPage = document.querySelector('#resultPage') as HTMLElement
 
 // TODO: flytta denna till rätt modul, användes här bara för att testa att den byter frågor
-export const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButtonElement;
+const playAgainBtn = document.querySelector('#playAgainBtn') as HTMLButtonElement;
 playAgainBtn.addEventListener('click', playAgain);
 
-export let currentQuestionIndex = 0;
+let currentQuestionIndex = 0;
 const progressBarSpan = document.querySelector('#progressBarSpan') as HTMLElement;
 
 
@@ -61,7 +62,7 @@ const firstArrayShuffled = shuffleArray(firstArray);
 const secondArrayShuffled = shuffleArray(secondArray);
 
 // Funktion för att visa frågorna en i taget
-export function showQuestion(): void {
+function showQuestion(): void {
     questionParagraph.innerHTML = '';
 
     // Rensa "checked" markering från alla knappar vid ny fråga
@@ -167,9 +168,11 @@ function checkAnswer() {
 }
 
 // TODO: Som med variabeln för knappen, flytta till rätt modul. användes bara som test.
-export function playAgain(): void {
+function playAgain(): void {
     isFirstArray = !isFirstArray;
     currentQuestionIndex = 0;
+    score = 0; 
+    resultPage.classList.add('hidden'); 
     startGame();
 }
 
@@ -198,9 +201,8 @@ function showResultPage() {
     }
 
     resultParagraph.innerHTML = `
-    <span>Tid: ${timeResult}</span>
-    <span>Poäng: ${score}</span> 
-    <p>${resultMessage}</p>`;
-
+        <span>Tid: ${timeResult}</span>
+        <span>Poäng: ${score}</span> 
+        <p>${resultMessage}</p>`;
 }
 
