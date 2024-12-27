@@ -3,9 +3,17 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quizza med Estelle</title>
+  <!--This is where we can add our own Favicon
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  -->
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
   <!-- Meta Tags -->
 <meta property="og:title" content="Quizza med Estelle - Utmana dina filmkunskaper med vårt roliga quizspel!">
@@ -31,7 +39,8 @@
     { "@type": "Person", "name": "Moa Magnfors" },
     { "@type": "Person", "name": "Olivia Almseger" },
     { "@type": "Person", "name": "Tea Grossman" },
-    { "@type": "Person", "name": "Valentin Björkli Castillo" }
+    { "@type": "Person", "name": "Valentin Björkli Castillo" },
+    { "@type": "Person", "name": "Lenita Dahlin" }
   ],
   "genre": ["Quiz", "Trivia", "Film", "Entertainment"],
   "playMode": "SinglePlayer",
@@ -51,20 +60,40 @@
 <body>
   <!--Landing page-->
   <section id="landingPage" class="landing-page">
+    <div class="landingPageContent">
     <h1>Quizza med Estelle</h1>
     <label>
       <span>Skriv ditt namn här:</span>
       <input id="usernameInput" type="text">
     </label>
-    <button id="startGameBtn">Starta spelet</button> 
+    <button id="startGameBtn" class="startGameBtn">Starta spelet!</button> 
+  </div>
+    <img class="landingPageBG" src="assets/images/popcorn.png" 
+    alt="An illustration of a red popcorn bucket with white stripes. The popcorn are overflowing and a few have fallen to the ground." 
+    width="547" 
+    height="846" 
+    loading="lazy">
   </section>
 
   <!--Main page: GAME-->
   <main id="gamePage" class="game-page hidden">
     <header>
-      <img src="assets/images/QuizEstelle_logo.png" alt="" width="700" height="382" loading="lazy">
+      <img src="assets/images/QuizEstelle_logo.png" 
+      alt="" 
+      width="700" 
+      height="382" 
+      loading="lazy">
     </header>
-
+    <img class="gamePageBg" src="/assets/images/quizza_med_estelle_bg_popcorn.png" 
+      alt="A movie salon with a big screen, seats, and red curtains that are tied to the sides"
+      height="1920"
+      weight="1080"
+      loading="lazy">
+    <img class="gamePageBgPopcorn" src="/assets/images/quizza_med_estelle_bg.png" 
+      alt="A popcorn bucket overflowing with popcorn"
+      height="1920"
+      weight="1080"
+      loading="lazy">
     <div id="progressTopContainer" class="progress-top-container">
       <span id="timeSpan"></span>
       <span id="progressBarSpan"></span>
