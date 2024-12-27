@@ -1,3 +1,16 @@
+# 27/12
+Vi träffas efter julledighet, går igenom vad som är kvar av uppgiften. 
+- Lenita tar sig an styling
+-Ludvig lägger in fokus och styling för tangentbord
+-Valentin gör avsluta-knapp och formaterar hela dokumentet
+-Olivia, Moa, Tea påbörjar README fil
+-Vi förbereder inför demo
+- Vi träffas 08.45 måndag 30/12 för att förbereda kort inför demo
+
+Att göra:
+-Vi ska fylla i retro till på måndag
+-Ändra så att frågan fortfarande visas när rätt eller fel kommer upp(vid lås ditt svar)
+
 # 20/12
 - Vi beslutar att ändra regeln om semikolon.
 - Vi visar vad vi gjort igår, gör pull request, löser konflikter och mergar.
