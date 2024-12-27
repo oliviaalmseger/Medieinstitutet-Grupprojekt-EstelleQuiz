@@ -29,16 +29,8 @@ const quizQuestionsArray: IQuestion[] = [
         question:
             'En kort person går på en lång resa med en smyckeslåda, medan en grupp människor försöker hindra ett vulkanutbrott.',
         options: [
-            {
-                id: 0,
-                answer: 'Harry Potter och Hemligheternas Kammare',
-                trueOrFalse: false,
-            },
-            {
-                id: 1,
-                answer: 'Sagan om Ringen: Brödraskapet',
-                trueOrFalse: true,
-            },
+            {id: 0, answer: 'Harry Potter och Hemligheternas Kammare', trueOrFalse: false },
+            {id: 1, answer: 'Sagan om Ringen: Brödraskapet', trueOrFalse: true },
             { id: 2, answer: 'Game of Thrones', trueOrFalse: false },
         ],
     },
@@ -59,7 +51,7 @@ const quizQuestionsArray: IQuestion[] = [
         question:
             'En bonde hittar en gammal gubbe, en sassy prinsessa och en väldigt hårig vän som hjälper honom i kampen mot en maskinpark.',
         options: [
-            { id: 0, answer: `Star Wars: Episod IV – Ett Nytt Hopp`, trueOrFalse: true,},
+            { id: 0, answer: `Star Wars: Episod IV – Ett Nytt Hopp`, trueOrFalse: true },
             { id: 1, answer: 'Guardians of the Galaxy', trueOrFalse: false },
             { id: 2, answer: 'Transformers', trueOrFalse: false },
         ],
@@ -240,6 +232,6 @@ const quizQuestionsArray: IQuestion[] = [
             { id: 2, answer: 'Trollkarlen från Oz', trueOrFalse: false },
         ],
     },
-]
+];
 
 export default quizQuestionsArray;
