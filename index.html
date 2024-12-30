@@ -3,9 +3,17 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quizza med Estelle</title>
+  <!--This is where we can add our own Favicon
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  -->
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
   <!-- Meta Tags -->
 <meta property="og:title" content="Quizza med Estelle - Utmana dina filmkunskaper med vårt roliga quizspel!">
@@ -31,7 +39,8 @@
     { "@type": "Person", "name": "Moa Magnfors" },
     { "@type": "Person", "name": "Olivia Almseger" },
     { "@type": "Person", "name": "Tea Grossman" },
-    { "@type": "Person", "name": "Valentin Björkli Castillo" }
+    { "@type": "Person", "name": "Valentin Björkli Castillo" },
+    { "@type": "Person", "name": "Lenita Dahlin" }
   ],
   "genre": ["Quiz", "Trivia", "Film", "Entertainment"],
   "playMode": "SinglePlayer",
@@ -51,49 +60,81 @@
 <body>
   <!--Landing page-->
   <section id="landingPage" class="landing-page">
+    <div class="landingPageContent">
     <h1>Quizza med Estelle</h1>
     <label>
-      <span>Skriv ditt namn här:</span>
-      <input id="usernameInput" type="text">
+      <span class="nameInputText">Skriv ditt namn här:</span>
+      <input id="usernameInput" class="usernameInput" type="text">
     </label>
-    <button id="startGameBtn">Starta spelet</button> 
+    <button id="startGameBtn" class="start-game-btn">Starta spelet!</button> 
+  </div>
+ 
+    <img class="landing-page-bg" src="assets/images/popcorn2.png" 
+    alt="An illustration of a red popcorn bucket with white stripes. The popcorn are overflowing and a few have fallen to the ground." 
+    width="547" 
+    height="846" 
+    loading="lazy">
+
   </section>
 
   <!--Main page: GAME-->
   <main id="gamePage" class="game-page hidden">
+    
     <header>
-      <img src="assets/images/QuizEstelle_logo.png" alt="" width="700" height="382" loading="lazy">
+      <h2>Quizza med Estelle</h2>
+      <!--
+      <img src="assets/images/QuizEstelle_logo.png" 
+      alt="" 
+      width="700" 
+      height="382" 
+      loading="lazy">
+      --> 
     </header>
+      
+    <img class="game-page-bg" src="/assets/images/quizza_med_estelle_bg.png" 
+      alt="A movie salon with a big screen, seats, and red curtains that are tied to the sides and there is a popcorn bucket overflowing with popcorn that sits slightly infront of the screen."
+      height="1080"
+      width="1920"
+      loading="lazy">
 
-    <div id="progressTopContainer" class="progress-top-container">
-      <span id="timeSpan"></span>
-      <span id="progressBarSpan"></span>
+    <div class="game-page-content">
+      
+      <div class="q-and-a-containers">
+        <div id="questionContainer" class="question-container">
+          <p id="questionParagraph" class="question-paragraph"></p> <!--THIS!!!-->
+        </div>
+
+        <div id="optionsContainer" class="options-container">
+          <label class="option-one">
+            <span id="optionOne"></span>
+            <input id="optionOneInput" type="radio" name="answer" required>
+            <span class="options-checkmark"></span>
+          </label>
+          <label class="option-two">
+            <span id="optionTwo"></span>
+            <input id="optionTwoInput" type="radio" name="answer">
+            <span class="options-checkmark"></span>
+          </label>
+          <label class="option-three">
+            <span id="optionThree"></span>
+            <input id="optionThreeInput" type="radio" name="answer">
+            <span class="options-checkmark"></span>
+          </label>        
+        </div>
+      </div>
+
+      <div class="buttons-and-progress">
+        <div id="progressTopContainer" class="progress-top-container">
+          <span id="timeSpan" class="timeSpan"></span>
+          <span id="progressBarSpan" class="amount-of-questions"></span>
+        </div>
+        <button id="lockAnswerBtn" class="lock-answer-btn">Lås ditt svar</button>
+
+        <div id="onwardContainer" class="onward-container">
+          <button id="onwardBtn" class="onward-btn">Gå vidare</button>
+        </div>
+      </div>
     </div>
-
-    <div id="questionContainer" class="question-container">
-      <p id="questionParagraph" class="question-paragraph"></p>
-    </div>
-
-    <div id="optionsContainer" class="options-container">
-      <label>
-        <span id="optionOne"></span>
-        <input id="optionOneInput" type="radio" name="answer" required>
-      </label>
-      <label>
-        <span id="optionTwo"></span>
-        <input id="optionTwoInput" type="radio" name="answer">
-      </label>
-      <label>
-        <span id="optionThree"></span>
-        <input id="optionThreeInput" type="radio" name="answer">
-      </label>
-      <button id="lockAnswerBtn">Lås ditt svar</button>
-    </div>
-
-    <div id="onwardContainer">
-      <button id="onwardBtn">Gå vidare</button>
-    </div>
-
   </main>
 
   <!--Result page-->
