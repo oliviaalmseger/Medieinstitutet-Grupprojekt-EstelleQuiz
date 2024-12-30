@@ -3,9 +3,13 @@
 - Uppstartsmöte innan redovsining för stakeholders. 
 - Ser över Lenitas styling av landing page och game page. 
 - Fixar pull request och ser till att alla har den senaste versionen. 
-- Standup: 
+- Standup: Planerar dagens arbete utifrån backlog. Nu mest styling + "finlir", det mesta grovarbetet ingick i sprint 1. 
+
+SCRUM-masterplanering framåt: Moa 2/1, Ludde 3/1, Valentin 6/1, Lenita 7/1 
+
 
 # 27/12
+Dagens SCRUM-master: Tea
 Vi träffas efter julledighet, går igenom vad som är kvar av uppgiften. 
 - Lenita tar sig an styling
 -Ludvig lägger in fokus och styling för tangentbord
@@ -19,6 +23,7 @@ Att göra:
 -Ändra så att frågan fortfarande visas när rätt eller fel kommer upp(vid lås ditt svar)
 
 # 20/12
+
 - Vi beslutar att ändra regeln om semikolon.
 - Vi visar vad vi gjort igår, gör pull request, löser konflikter och mergar.
 - Lenita tar sig an styling, illustrerar bilder.
