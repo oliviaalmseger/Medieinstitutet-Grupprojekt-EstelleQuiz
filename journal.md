@@ -1,3 +1,10 @@
+# 30/12 
+- Dagens SCRUM-master: Olivia 
+- Uppstartsmöte innan redovsining för stakeholders. 
+- Ser över Lenitas styling av landing page och game page. 
+- Fixar pull request och ser till att alla har den senaste versionen. 
+- Standup: 
+
 # 27/12
 Vi träffas efter julledighet, går igenom vad som är kvar av uppgiften. 
 - Lenita tar sig an styling
