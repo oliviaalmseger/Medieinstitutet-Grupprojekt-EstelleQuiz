@@ -1,3 +1,28 @@
 //Colors
-$primarycolor: #25472d 
-//Fonts
+$primarycolor: #25472d;
+
+/* ---------------------*/
+/* ----`*~ FONTS ~*´----*/
+/* ---------------------*/
+
+.bungee-tint-regular {
+    font-family: "Bungee Tint", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.roboto-mono-regular {
+font-family: "Roboto Mono", serif;
+font-optical-sizing: auto;
+font-style: normal;
+}
+.landing-page, .game-page, .result-page {
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h1, h2 {
+    font-family: "Bungee Tint", serif;
+    font-weight: 400;
+    font-style: normal;
+}
