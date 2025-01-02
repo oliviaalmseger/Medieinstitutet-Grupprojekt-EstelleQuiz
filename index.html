@@ -13,17 +13,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
-  <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
 
   <!-- Meta Tags -->
-<meta property="og:title" content="Quizza med Estelle - Utmana dina filmkunskaper med vårt roliga quizspel!">
-<meta name="description" content="Testa dina filmkunskaper med 'Quizza med Estelle'! Ett underhållande filmquiz där du får svara på frågor om filmer, skådespelare och klassiska scener. Spela online och se hur bra du är på film!">
-<meta property="og:type" content="game">
-<meta property="og:url" content="https://medieinstitutet.github.io/fed24d-js-intro-inl-2-quiz-team-estelle/">
-<meta property="og:image" content="https://medieinstitutet.github.io/fed24d-js-intro-inl-2-quiz-team-estelle/-logo.png">
+  <meta property="og:title" content="Quizza med Estelle - Utmana dina filmkunskaper med vårt roliga quizspel!">
+  <meta name="description"
+    content="Testa dina filmkunskaper med 'Quizza med Estelle'! Ett underhållande filmquiz där du får svara på frågor om filmer, skådespelare och klassiska scener. Spela online och se hur bra du är på film!">
+  <meta property="og:type" content="game">
+  <meta property="og:url" content="https://medieinstitutet.github.io/fed24d-js-intro-inl-2-quiz-team-estelle/">
+  <meta property="og:image"
+    content="https://medieinstitutet.github.io/fed24d-js-intro-inl-2-quiz-team-estelle/-logo.png">
 
-<!-- Structured Data (JSON-LD) -->
-<script type="application/ld+json">
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Game",
@@ -57,29 +61,28 @@
 }
 </script>
 </head>
+
 <body>
   <!--Landing page-->
   <section id="landingPage" class="landing-page">
-    <div class="landingPageContent">
-    <h1>Quizza med Estelle</h1>
-    <label>
-      <span class="nameInputText">Skriv ditt namn här:</span>
-      <input id="usernameInput" class="usernameInput" type="text">
-    </label>
-    <button id="startGameBtn" class="start-game-btn">Starta spelet!</button> 
-  </div>
- 
-    <img class="landing-page-bg" src="assets/images/popcorn2.png" 
-    alt="An illustration of a red popcorn bucket with white stripes. The popcorn are overflowing and a few have fallen to the ground." 
-    width="547" 
-    height="846" 
-    loading="lazy">
+    <div class="landing-page-content">
+      <h1>Quizza med Estelle</h1>
+      <label>
+        <span class="name-input-text">Skriv ditt namn här:</span>
+        <input id="usernameInput" class="username-input" type="text">
+      </label>
+      <button id="startGameBtn" class="start-game-btn">Starta spelet!</button>
+    </div>
+
+    <img class="landing-page-bg" src="assets/images/popcorn2.png"
+      alt="An illustration of a red popcorn bucket with white stripes. The popcorn are overflowing and a few have fallen to the ground."
+      width="547" height="846" loading="lazy">
 
   </section>
 
   <!--Main page: GAME-->
   <main id="gamePage" class="game-page hidden">
-    
+
     <header>
       <h2>Quizza med Estelle</h2>
       <!--
@@ -88,17 +91,15 @@
       width="700" 
       height="382" 
       loading="lazy">
-      --> 
+      -->
     </header>
-      
-    <img class="game-page-bg" src="/assets/images/quizza_med_estelle_bg.png" 
+
+    <img class="game-page-bg" src="/assets/images/quizza_med_estelle_bg.png"
       alt="A movie salon with a big screen, seats, and red curtains that are tied to the sides and there is a popcorn bucket overflowing with popcorn that sits slightly infront of the screen."
-      height="1080"
-      width="1920"
-      loading="lazy">
+      height="1080" width="1920" loading="lazy">
 
     <div class="game-page-content">
-      
+
       <div class="q-and-a-containers">
         <div id="questionContainer" class="question-container">
           <p id="questionParagraph" class="question-paragraph"></p> <!--THIS!!!-->
@@ -108,24 +109,24 @@
           <label class="option-one">
             <span id="optionOne"></span>
             <input id="optionOneInput" type="radio" name="answer" required>
-            <span class="options-checkmark"></span>
+            <!-- <span class="options-checkmark"></span> -->
           </label>
           <label class="option-two">
             <span id="optionTwo"></span>
             <input id="optionTwoInput" type="radio" name="answer">
-            <span class="options-checkmark"></span>
+            <!-- <span class="options-checkmark"></span> -->
           </label>
           <label class="option-three">
             <span id="optionThree"></span>
             <input id="optionThreeInput" type="radio" name="answer">
-            <span class="options-checkmark"></span>
-          </label>        
+            <!-- <span class="options-checkmark"></span> -->
+          </label>
         </div>
       </div>
 
       <div class="buttons-and-progress">
         <div id="progressTopContainer" class="progress-top-container">
-          <span id="timeSpan" class="timeSpan"></span>
+          <span id="timeSpan" class="time-span"></span>
           <span id="progressBarSpan" class="amount-of-questions"></span>
         </div>
         <button id="lockAnswerBtn" class="lock-answer-btn">Lås ditt svar</button>
@@ -149,9 +150,8 @@
       <button id="quitGameBtn" class="quit-game-btn">Avsluta</button>
     </div>
   </section>
-  
+
   <script type="module" src="/src/main.ts"></script>
 </body>
 
 </html>
-
