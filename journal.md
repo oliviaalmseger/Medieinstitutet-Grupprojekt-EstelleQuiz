@@ -1,11 +1,18 @@
+# 2/1
+Dagens scrum-master: Moa
+-Vi pratar om styling, det är sårbart att endast en är insatt i stylingen. Valentin tar sig an att börja med bekräftelsesidan och flytta runt koden så den är i rätt fil för tex desktop, mobile, variables etc 
+-Vi andra påbörjar presentation, spånar vilka bilder som ska vara med i presentationen och lägger in stödord, delar upp områden
+-vi mergar Valentins ändringar i scss in i developer
+-vi mergar developer in i main
+
 # 30/12 
 - Dagens SCRUM-master: Olivia 
 - Uppstartsmöte innan redovsining för stakeholders. 
 - Ser över Lenitas styling av landing page och game page. 
 - Fixar pull request och ser till att alla har den senaste versionen. 
-- Standup: Planerar dagens arbete utifrån backlog. Nu mest styling + "finlir", det mesta grovarbetet ingick i sprint 1. 
+- Standup:  Planerar dagens arbete utifrån backlog. Nu mest styling + "finlir", det mesta grovarbetet ingick i sprint 1. 
 
-SCRUM-masterplanering framåt: Moa 2/1, Ludde 3/1, Valentin 6/1, Lenita 7/1 
+SCRUM-masterplanering framåt: Moa 2/1, Ludde 3/1, Valentin 7/1, Lenita 9/1 
 
 
 # 27/12
@@ -23,7 +30,6 @@ Att göra:
 -Ändra så att frågan fortfarande visas när rätt eller fel kommer upp(vid lås ditt svar)
 
 # 20/12
-
 - Vi beslutar att ändra regeln om semikolon.
 - Vi visar vad vi gjort igår, gör pull request, löser konflikter och mergar.
 - Lenita tar sig an styling, illustrerar bilder.
