@@ -240,7 +240,7 @@ header {
 
             //   font-size: 4rem;
             color: #f2e8cf;
-            margin-top: 1.5rem; //TODO: (margin-top: 0.5vh;)
+            margin-top: 1.5rem;
             //margin-bottom: 5rem;
         }
     }
@@ -375,7 +375,7 @@ header {
                 flex-basis: 100%;
                 border: #2a0000;
                 border-radius: 5px;
-                font-size: 1.25rem; // TODO: kolla igenom font-storlek
+                font-size: 1.25rem;
 
                 display: flex;
                 flex-direction: row;
@@ -393,7 +393,7 @@ header {
                     background-color: #f2e8cf83;
                     margin-top: 1rem;
                     margin-bottom: 0.3rem;
-                    font-size: 1rem; // TODO: kolla igenom font-storlek
+                    font-size: 1rem;
                 }
                 .time-span {
                     margin-right: 0.5rem;
@@ -407,10 +407,6 @@ header {
                 }
             }
         }
-    }
-    .game-page-bg { // TODO: kolla igenom denna
-        // justify-self: left;
-        // grid-column: 1 / 4;
     }
 }
 
