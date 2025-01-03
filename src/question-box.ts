@@ -199,15 +199,15 @@ function showResultPage(): void {
 
     if(score < 2) {
         resultMessage = '<strong>Regissörens mardröm</strong>- Aj då! Du verkar ha missat de flesta filmerna. Kanske en filmkväll med klassiker är på sin plats?';
-        resultTicket.src = 'assets/images/tickets_1_wood.png';
+        resultTicket.src = 'assets/images/tickets_3_bronze.png';
         resultTicket.alt = '';
     } else if (score === 2 || score === 3) {
         resultMessage = '<strong>Filmupptäckare</strong>-Du är på väg att hitta dina favoritfilmer – dags att dyka ner i några filmklassiker!';
-        resultTicket.src = 'assets/images/tickets_2_red.png';
+        resultTicket.src = 'assets/images/tickets_3_bronze.png';
         resultTicket.alt = '';
     } else if (score >= 4 && score <= 6) {
         resultMessage = '<strong>Popcornproffs</strong>-Inte illa! Du missar några detaljer, men du är klart på väg mot en Oscarsvinst i filmkunskap!';
-        resultTicket.src = 'assets/images/tickets_3_bronze.png';
+        resultTicket.src = 'assets/images/tickets_4_silver.png';
         resultTicket.alt = '';
     } else if (score >= 7 && score <= 9) {
         resultMessage = '<strong>Filmfantast</strong>-Bra jobbat! Du känner igen fler scener än vad en regissör gör på premiärdagen';
