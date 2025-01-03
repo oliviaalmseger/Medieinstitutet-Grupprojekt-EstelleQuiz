@@ -294,7 +294,7 @@ header {
                 flex-basis: 100%;
 
                 .question-paragraph {
-                    font-size: clamp(1rem, 4.5vw, 2rem);
+                    font-size: clamp(1rem, 4vw, 1.8rem);
                 }
             }
             .options-container {
@@ -302,6 +302,8 @@ header {
                 text-align: center;
                 // grid-column: 1 / 4;
                 // grid-row: 3;
+
+                font-size: clamp(1rem, 3vw, 1.5rem);
 
                 display: flex;
                 flex-wrap: wrap;
