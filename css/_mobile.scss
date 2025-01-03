@@ -372,6 +372,10 @@ header {
             flex-wrap: wrap;
             justify-content: center;
             gap: 1rem;
+            position: absolute;
+            bottom: 10%;
+            left: 0;
+            width: 100%;
 
             .lock-answer-btn {
                 flex-basis: 100%;
