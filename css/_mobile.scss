@@ -201,11 +201,15 @@ header {
 
 .game-page-bg {
     //max-width: 100%;
-    width: 100%;
+    // width: 100%;
     //min-width: 30vw;
     //min-width: 40vw;
-    max-height: 100vh;
+    height: 100%;
+    width: 100%;
     background-color: #420b09;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .game-page {
     height: 100vh;
@@ -236,11 +240,12 @@ header {
 
         h2 {
             font-size: clamp(2rem, 6vw, 6rem);
-            margin-inline: 1rem;
+            // margin-inline: 1rem;
 
             //   font-size: 4rem;
             color: #f2e8cf;
-            margin-top: 1.5rem;
+            margin-top: 0.8vh;
+            margin-inline: 2rem;
             //margin-bottom: 5rem;
         }
     }
@@ -252,11 +257,14 @@ header {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+        width: 100%;
 
         position: absolute;
 
         .q-and-a-containers {
-            min-height: 50vh;
+            // min-height: 50vh;
 
             // position: relative;
 
@@ -280,7 +288,7 @@ header {
                 text-align: center;
                 margin-bottom: 2vh;
                 //margin-bottom: 2rem;
-                font-size: 2.5vw;
+                // font-size: 2.5vw;
                 // grid-column: 1 / 4;
                 // grid-row: 1;
                 flex-basis: 100%;

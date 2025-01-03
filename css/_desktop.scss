@@ -56,13 +56,14 @@
     gap: 1rem;
     .game-page-content {
         grid-column: 1 / 4;
-        grid-row: 1;
+        grid-row: 0;
+        display: inline;
         .q-and-a-containers {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 30vh 1vh;
             gap: 1rem;
-            min-height: 35vh;
+            // min-height: 35vh;
             .question-container {
                 grid-column: 1 / 4;
                 grid-row: 1;
@@ -116,10 +117,13 @@
             grid-column: 1 / 4;
             grid-row: 6;
             position: absolute;
-            bottom: -30vh;
+            bottom: 10%;
+            left: 0;
+            width: 100%;
+            // transform: translateX(-50%);
 
-            margin-right: 10vw;
-            margin-left: 10vw;
+            // margin-right: 10vw;
+            // margin-left: 10vw;
 
             display: grid;
             grid-template-columns: repeat(5, 18vw);
@@ -141,8 +145,8 @@
     }
     .game-page-bg {
         // justify-self: left;
-        grid-column: 1 / 4;
-        grid-row: 1 / 7;
+        // grid-column: 1 / 4;
+        // grid-row: 1 / 7;
     }
 }
 /* ----------------------------------------*/
