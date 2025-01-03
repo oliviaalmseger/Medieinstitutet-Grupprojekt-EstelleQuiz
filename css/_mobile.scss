@@ -86,7 +86,7 @@ body {
             0% {opacity: 0%; font-size: 0rem;}
             25% {opacity: 30%;}
             50% {opacity: 75%;}
-            100% {opacity: 100%; font-size: 4rem;} // clamp(2rem, 10vw, 4rem)
+            100% {opacity: 100%; font-size: clamp(2rem, 10vw, 4rem);} // clamp(2rem, 10vw, 4rem)
         }
 
         h1 {
@@ -112,6 +112,7 @@ body {
             position: relative;
             justify-content: center;
             align-content: center;
+            color: black;
             .name-input-text {
                 // grid-column: 1 / 4;
                 // grid-row: 1;
