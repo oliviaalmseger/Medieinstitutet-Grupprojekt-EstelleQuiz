@@ -1,9 +1,35 @@
+# 3/1
+Scrum-master: Ludvig
+-vi berättar vad vi gjorde igår--> styling och presentation
+-vi tittar på feedback--> ser bra ut, vi ska göra om kommentarerna till engelska
+
+
+-Vi gör färdigt presentationen
+
+-Vi tittar på resultatsidan och beslutar att inkorporera olika biljetter för olika resultat.
+
+Valentin: bearbetar css-konflikt och lägger in biljettkorten
+
+Lenita: Stylear radioknappar och presentation
+
+Resten: Presentation, tittar på skärmläsare, försöker lägga fokus på resultatsidan som inte läses upp
+
+Läxa till tisdag:
+Kolla om dina slides fungerar med 20s, annars får vi strukturera om. (Vi försöker hålla oss till ca 15s för att inte dra över, och lämna utrymme för fel)
+
 # 2/1
 Dagens scrum-master: Moa
 -Vi pratar om styling, det är sårbart att endast en är insatt i stylingen. Valentin tar sig an att börja med bekräftelsesidan och flytta runt koden så den är i rätt fil för tex desktop, mobile, variables etc 
 -Vi andra påbörjar presentation, spånar vilka bilder som ska vara med i presentationen och lägger in stödord, delar upp områden
 -vi mergar Valentins ändringar i scss in i developer
 -vi mergar developer in i main
+-html-validering ser bra ut, 0 errors
+
+Vi behöver titta på:
+-(css-validering klagar på, rad 20 i variables) font-optical-sizing: auto
+- (css-validering klagar på rad 231 i mobile background-color: none
+-(css-validering klagar på) att css.style ej finns
+- kontrasten på starta-spelknapp, ändå över 90 i betyg
 
 # 30/12 
 - Dagens SCRUM-master: Olivia 
