@@ -45,16 +45,6 @@ body {
 /* ---`*~ LANDING_PAGE ~*´---*/
 /* --------------------------*/
 
-/*
-    background-image: url("/assets/images/popcorn.png");
-    background-repeat: no-repeat, repeat;
-    max-width: 100%;
-    height: auto;
-    //z-index: 2;
-    //background-color: #f8f2e5ad;
-
-*/
-
 .landing-page {
     height: 100vh;
     width: 100vw;
@@ -92,7 +82,16 @@ body {
         justify-content: center;
         align-content: center;
 
+        @keyframes fadeIn { // Fades in & sizes up the title
+            0% {opacity: 0%; font-size: 0rem;}
+            25% {opacity: 30%;}
+            50% {opacity: 75%;}
+            100% {opacity: 100%; font-size: clamp(2rem, 10vw, 4rem);} // clamp(2rem, 10vw, 4rem)
+        }
+
         h1 {
+            animation-name:  fadeIn;
+            animation-duration: 1.5s;
             text-align: center;
             flex-basis: 100%;
             // grid-column: 1 / 4;
@@ -113,6 +112,7 @@ body {
             position: relative;
             justify-content: center;
             align-content: center;
+            color: black;
             .name-input-text {
                 // grid-column: 1 / 4;
                 // grid-row: 1;
@@ -140,7 +140,6 @@ body {
         .start-game-btn {
             // grid-column: 2;
             // grid-row: 4;
-            // TODO: fixa kontrast mellan text och knapp-färg
             flex-basis: 100%;
             top: 1rem;
             justify-self: center;
@@ -148,8 +147,6 @@ body {
     }
     .landing-page-bg {
         justify-self: center;
-        // grid-column: 2;
-        // max-width: 100%;
         max-height: 70%;
         width: auto;
         opacity: 20%;
@@ -157,6 +154,7 @@ body {
 }
 
 .start-game-btn {
+    color: #f2e8cf;
     max-width: 15rem;
     padding: 15px;
     font-family: 'Roboto Mono', serif;
@@ -165,6 +163,7 @@ body {
     cursor: pointer;
     font-family: 'Roboto Mono', serif;
     font-size: 1.25rem;
+    font-weight: bold;
     border: none;
     border-radius: 0.75rem;
     background-color: #c43129;
@@ -202,16 +201,20 @@ header {
 
 .game-page-bg {
     //max-width: 100%;
-    width: 100%;
+    // width: 100%;
     //min-width: 30vw;
     //min-width: 40vw;
-    max-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background-color: #420b09;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .game-page {
     height: 100vh;
     width: 100vw;
     color: #2a0000;
-    /**/
     // display: grid;
     // grid-template-columns: repeat(3, 1fr);
     // gap: 1rem;
@@ -231,18 +234,18 @@ header {
         background-color: none;
         width: 100vw;
         position: absolute;
-        //height: 6.25rem;
 
         text-align: center;
         z-index: 2;
 
         h2 {
             font-size: clamp(2rem, 6vw, 6rem);
-            margin-inline: 1rem;
+            // margin-inline: 1rem;
 
             //   font-size: 4rem;
             color: #f2e8cf;
-            margin-top: 1.5rem;
+            margin-top: 0.8vh;
+            margin-inline: 2rem;
             //margin-bottom: 5rem;
         }
     }
@@ -254,13 +257,16 @@ header {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+        width: 100%;
 
         position: absolute;
 
         .q-and-a-containers {
-            min-height: 50vh;
+            // min-height: 50vh;
 
-            position: relative;
+            // position: relative;
 
             display: flex;
             flex-wrap: wrap;
@@ -282,20 +288,22 @@ header {
                 text-align: center;
                 margin-bottom: 2vh;
                 //margin-bottom: 2rem;
-                font-size: 2.5vw;
+                // font-size: 2.5vw;
                 // grid-column: 1 / 4;
                 // grid-row: 1;
                 flex-basis: 100%;
 
                 .question-paragraph {
-                    font-size: clamp(1rem, 4.5vw, 2rem);
+                    font-size: clamp(1rem, 4vw, 1.8rem);
                 }
             }
             .options-container {
                 font-size: 1rem;
                 text-align: center;
-                grid-column: 1 / 4;
-                grid-row: 2;
+                // grid-column: 1 / 4;
+                // grid-row: 3;
+
+                font-size: clamp(1rem, 3vw, 1.5rem);
 
                 display: flex;
                 flex-wrap: wrap;
@@ -308,7 +316,7 @@ header {
 
                 .option-one {
                     flex-basis: 100%;
-                    text-align: center;
+                    text-align: start;
                     // grid-column: 1 / 4;
                     // grid-row: 2;
                     // justify-self: center;
@@ -317,11 +325,12 @@ header {
                     padding: 0.5rem;
                     margin-bottom: 1rem;
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: flex-start;
+                    gap: 1rem;
                 }
                 .option-two {
                     flex-basis: 100%;
-                    text-align: center;
+                    text-align: start;
                     // grid-column: 1 / 4;
                     // grid-row: 3;
                     // justify-self: center;
@@ -330,11 +339,12 @@ header {
                     padding: 0.5rem;
                     margin-bottom: 1rem;
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: flex-start;
+                    gap: 1rem;
                 }
                 .option-three {
                     flex-basis: 100%;
-                    text-align: center;
+                    text-align: start;
                     // grid-column: 1 / 4;
                     // grid-row: 4;
                     // justify-self: center;
@@ -343,7 +353,8 @@ header {
                     padding: 0.5rem;
                     margin-bottom: 1rem;
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: flex-start;
+                    gap: 1rem;
                 }
             }
         }
@@ -361,6 +372,10 @@ header {
             flex-wrap: wrap;
             justify-content: center;
             gap: 1rem;
+            position: absolute;
+            bottom: 10%;
+            left: 0;
+            width: 100%;
 
             .lock-answer-btn {
                 flex-basis: 100%;
@@ -380,7 +395,6 @@ header {
                 flex-direction: row;
                 flex-wrap: nowrap;
                 justify-content: center;
-                justify-content: space-evenly;
                 align-items: baseline;
 
                 .time-span,
@@ -407,76 +421,27 @@ header {
             }
         }
     }
-    .game-page-bg {
-        justify-self: left;
-        grid-column: 1 / 4;
-    }
 }
 
 /* -------`*~ RADIO_BUTTONS ~*´--------*/
-/*
-.question-container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.question-container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
-.options-checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%;
-  }
-// On mouse-over, add a grey background color 
-.question-container:hover input ~ .options-checkmark {
-    background-color: #ccc;
-  }
-  
-  // When the radio button is checked, add a blue background
-  .question-container input:checked ~ .options-checkmark {
-    background-color: #2196F3;
-  }
-  
-  // Create the indicator (the dot/circle - hidden when not checked)
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  // Show the indicator (dot/circle) when checked
-  .question-container input:checked ~ .options-checkmark:after {
-    display: block;
-  }
-  
-  // Style the indicator (dot/circle)
-  .question-container .options-checkmark:after {
-       top: 9px;
-      left: 9px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: white;
-  }
-*/
+
+
+
 /* -------`*~ BUTTONS ~*´--------*/
 
 .buttons-and-progress {
+    @keyframes spinnyBtn { // Rotates (shakes) the button
+        0% {rotate: 15deg;}
+        25% {rotate: -5deg;}
+        50% {rotate: 10deg;}
+        75% {rotate: -15deg;}
+        100% {rotate: 5deg;}
+    }
+
     .lock-answer-btn {
+        animation-name: spinnyBtn;
+        animation-duration: 3s;
+        animation-delay: 15s;
         color: #f2e8cf;
         max-width: 25vw;
         padding: 1rem;
@@ -491,7 +456,7 @@ header {
         border-radius: 0.75rem;
         background-color: #c43129;
         box-shadow: 0 8px #7c1e19;
-        position: relative;
+        // position: relative;
     }
     .lock-answer-btn:hover {
         background-color: #df4e47;
@@ -525,7 +490,7 @@ header {
             border-radius: 0.75rem;
             background-color: #c43129;
             box-shadow: 0 6px #7c1e19;
-            position: relative;
+            // position: relative;
         }
         .onward-btn:hover {
             background-color: #df4e47;
@@ -545,8 +510,68 @@ header {
         }
     }
 }
+/*
+*/
+
+/* ----------------------------------------*/
+/* -------------`*~ PAGE_3 ~*´-------------*/
+/* ----------`*~ RESULTS_PAGE ~*´----------*/
+/* ----------------------------------------*/
+
 .result-page {
+    height: 100vh;
+    width: 100vw;
+
+    position: relative;
+    text-align: center;
+
+    // background-color: #420b09;
+    overflow: hidden;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    h2 {
+        font-size: clamp(2rem, 6vw, 6rem);
+
+        position: relative;
+        text-align: center;
+        justify-self: center;
+        margin-bottom: 1vh;
+    }
+    .result-ticket {
+        position: absolute;
+        // top: 50%;
+        width: 100vw;
+        height: auto;
+        background-size: cover;
+        transform: scale(1.3);
+    }
+    .result-text-container {
+        flex-basis: 100%;
+        font-size: clamp(1rem, 4vw, 2rem);
+        color: black; // TODO: fixa denna så att den funkar för alla
+        position: relative;
+        top: -10%;
+        margin-inline: 20vw;
+        .result-paragraph {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            p {
+                text-align: center;
+            }
+        }
+    }
     .result-page-btns-container {
+        flex-basis: 50%;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
         .play-again-btn, .quit-game-btn {
             color: #f2e8cf;
             max-width: 25vw;
@@ -561,62 +586,11 @@ header {
             border-radius: 0.75rem;
             background-color: #c43129;
             box-shadow: 0 6px #7c1e19;
-            position: relative;
+            // position: relative;
         }
         .play-again-btn:hover, .quit-game-btn:hover {
             background-color: #df4e47;
             box-shadow: 0 6px #c02f27;
         }
-        // .onward-btn:active {
-        //     background-color: #df4e47;
-        //     box-shadow: 0 2px #7c1e19;
-        //     transform: translateY(4px);
-        // }
-        // .onward-btn:disabled {
-        //     opacity: 60%;
-        //     background-color: #c43129;
-        //     box-shadow: 0 6px #7c1e19;
-        //     transform: translateY(4px);
-        //     cursor: not-allowed;
-        // }
-    }
-}
-
-/*
-*/
-
-/* ----------------------------------------*/
-/* -------------`*~ PAGE_3 ~*´-------------*/
-/* ----------`*~ RESULTS_PAGE ~*´----------*/
-/* ----------------------------------------*/
-
-.result-page {
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    h2 {
-        font-size: clamp(2rem, 6vw, 6rem);
-    }
-    .result-text-container {
-        flex-basis: 100%;
-        font-size: clamp(1rem, 5vw, 2rem);
-        .result-paragraph {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            p {
-                text-align: center;
-            }
-        }
-    }
-    .result-page-btns-container {
-        flex-basis: 50%;
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
     }
 }

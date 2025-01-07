@@ -186,6 +186,8 @@ function quitGame(): void {
 
 // -------------------------------- Visa resultat ------------------------------------------
 
+const resultTicket = document.querySelector('#resultTicket') as HTMLImageElement; 
+
 // Funktion för att få fram confirmation page
 // Presenterar resultat, tid och olika fraser för olika antal rätt
 function showResultPage(): void {
@@ -197,14 +199,24 @@ function showResultPage(): void {
 
     if(score < 2) {
         resultMessage = '<strong>Regissörens mardröm</strong>- Aj då! Du verkar ha missat de flesta filmerna. Kanske en filmkväll med klassiker är på sin plats?';
+        resultTicket.src = 'assets/images/tickets_3_bronze.png';
+        resultTicket.alt = '';
     } else if (score === 2 || score === 3) {
         resultMessage = '<strong>Filmupptäckare</strong>-Du är på väg att hitta dina favoritfilmer – dags att dyka ner i några filmklassiker!';
+        resultTicket.src = 'assets/images/tickets_3_bronze.png';
+        resultTicket.alt = '';
     } else if (score >= 4 && score <= 6) {
         resultMessage = '<strong>Popcornproffs</strong>-Inte illa! Du missar några detaljer, men du är klart på väg mot en Oscarsvinst i filmkunskap!';
+        resultTicket.src = 'assets/images/tickets_4_silver.png';
+        resultTicket.alt = '';
     } else if (score >= 7 && score <= 9) {
         resultMessage = '<strong>Filmfantast</strong>-Bra jobbat! Du känner igen fler scener än vad en regissör gör på premiärdagen';
+        resultTicket.src = 'assets/images/tickets_4_silver.png';
+        resultTicket.alt = '';
     } else if (score === 10){
         resultMessage = '<strong>Filmgeni</strong>-Wow! Du är ett levande filmlexikon – Spielberg ringer nog snart för tips!'
+        resultTicket.src = 'assets/images/tickets_5_gold.png';
+        resultTicket.alt = '';
     } else {
         resultMessage = 'Nu vart det fel, hmmm';
     }
