@@ -1,6 +1,7 @@
 
 # Quizza med Estelle
 Welcome to our movie-themed quiz application, **Quizza med Estelle**! This project was developed as part of our JavaScript course, where we explored interactive web development and leveraged TypeScript for the first time. The application focuses on delivering an engaging user experience, adhering to modern web development practices, and showcasing collaborative team efforts. 
+
 ## 🚀 Project Overview 
 Our movie quiz is an interactive web application designed to test users' movie knowledge while providing an engaging and user-friendly experience. This project exemplifies modern web development practices while showcasing our ability to collaborate effectively in a team setting, leveraging agile methodologies for structured and efficient progress. It demonstrates:
 
@@ -14,25 +15,25 @@ Our movie quiz is an interactive web application designed to test users' movie k
 
 ## 🎥 Demo 
 [Click here to view the demo] (https://medieinstitutet.github.io/fed24d-js-intro-inl-2-quiz-team-estelle/)
+
 ## 📸 Screenshots 
-**Landing page**
-![Landing page](assets/screenshots/front-page-desktop.jpg)
+**Landing page - Desktop**
+![Landing page - Desktop](public/screenshots/landingPageDesktop.png)
 
+**Game page - Desktop**
+![Game page - Desktop](public/screenshots/gamePageDesktop.png)
 
-**Game page**
-![Game page](assets/screenshots/front-page-desktop.jpg)
+**Result page - Desktop**
+![Result page - Desktop](public/screenshots/resultPageDesktop.png)
 
+**Landing page - Mobile**
+![Landing page - Mobile](public/screenshots/landingPageMobile.png)
 
-**Result page**
-![Result page](assets/screenshots/front-page-desktop.jpg)
+**Game page - Mobile**
+![Game page - Mobile](public/screenshots/gamePageMobile.png)
 
-
-**Mobile**
-![Mobile](assets/screenshots/front-page-desktop.jpg)
-
-
-**Desktop**
-![Desktop](assets/screenshots/front-page-desktop.jpg)
+**Result page - Mobile**
+![Result page - Mobile](public/screenshots/resultPageMobile.png)
 
 ## 🛠️ Features 
 - **Responsive Design**: The quiz adapts seamlessly to all screen sizes, ensuring a smooth experience across devices.
@@ -83,18 +84,16 @@ The application is divided into three main sections:
 
 ![Prettier](https://img.shields.io/badge/prettier-%23F7B93E.svg?style=for-the-badge&logo=prettier&logoColor=black) 
 
-
-
 ## 🔍 Validation & Lighthouse analysis 
 The movie quiz application has been validated using W3C tools to ensure compliance with proper HTML5, CSS3, and ARIA standards.
 
 A Lighthouse analysis was performed to optimize the application’s performance, accessibility, and SEO. Based on the results, improvements were made to enhance loading speed, accessibility for all users, and search engine visibility, contributing to a smoother and more user-friendly experience.  
 
-### Bilder? 
-validering HTML 
-validering CSS 
-validering js?
-Lighthouse screenshot 
+**HTML Validation**
+![HTML Validation](public/screenshots/HTMLValidation.png)
+
+**Lighthouse report**
+![Lighthouse report](public/screenshots/lighthouseEstelle.png)
 
 ## 🎯 Learning Journey 
 Through the development of this quiz application, we achieved the following learning goals:   
