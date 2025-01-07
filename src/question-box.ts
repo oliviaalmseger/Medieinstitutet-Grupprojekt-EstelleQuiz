@@ -4,7 +4,7 @@ import {startGame, landingPage} from './main.ts';
 import {stopTimer, timeResult} from './progress-top.ts';
 
 // ----------------------------------------------------------------------------------
-// ---------------------------- Variabler och knappar -------------------------------
+// ---------------------------- Variables and buttons -------------------------------
 // ----------------------------------------------------------------------------------
 
 const questionParagraph = document.querySelector('#questionParagraph') as HTMLElement;
@@ -29,7 +29,7 @@ const progressBarSpan = document.querySelector('#progressBarSpan') as HTMLElemen
 
 let isFirstArray = true;
 
-//----------------- Knappar och span:ar för svaralternativ --------------------------
+//----------------- Buttons and spans for response options --------------------------
 
 const optionOne = document.querySelector('#optionOne') as HTMLElement;
 const optionOneInput = document.querySelector('#optionOneInput') as HTMLInputElement;
@@ -41,11 +41,11 @@ const optionThree = document.querySelector('#optionThree') as HTMLElement;
 const optionThreeInput = document.querySelector('#optionThreeInput') as HTMLInputElement;
 
 // ----------------------------------------------------------------------------------
-// ---------------------------- Funktioner för spelet -------------------------------
+// ---------------------------- Features of the game -------------------------------
 // ----------------------------------------------------------------------------------
 
 
-// Funktion för att slumpa fram ordningen på arrayen (Baserad på Fisher-Yates Sorting Algorithm)
+// Function to randomize the order of the array (Based of Fisher-Yates Sorting Algorithm)
 function shuffleArray<T>(array: T[]) {
     const shuffled = [...array];
 
@@ -56,32 +56,32 @@ function shuffleArray<T>(array: T[]) {
     return shuffled;
 } 
 
-// -------------------------------- Visa upp frågor -------------------------------------------
+// -------------------------------- Display questions -------------------------------------------
 
-// Nya arrayer som har delat upp original-arrayen
-const firstArray = quizQuestionsArray.slice(0, 10); // Räknar från index 0 till och med (men exklusive) 10, alltså tar den index 0-9
-const secondArray = quizQuestionsArray.slice(10, 20); // Samma som ovan fast tar index 10-19
+// New arrays that have split the original array
+const firstArray = quizQuestionsArray.slice(0, 10); // Counts from index 0 up to and including (but excluding) 10, so it takes index 0-9
+const secondArray = quizQuestionsArray.slice(10, 20); // Same as above but takes index 10-19
 
-// Shuffleade arrayer av de uppdelade
+// Shuffled arrays of the partitioned
 const firstArrayShuffled = shuffleArray(firstArray);
 const secondArrayShuffled = shuffleArray(secondArray);
 
-// Funktion för att visa frågorna en i taget
+// Function to show the questions one at a time
 function showQuestion(): void {
     questionParagraph.innerHTML = '';
 
-    // Rensa "checked" markering från alla knappar vid ny fråga
-    // Gör att svarsalternativen går att klicka på igen
+    // Clear the "checked" mark from all buttons for a new question
+    // Make the answer options clickable again
     const allBtns = document.querySelectorAll<HTMLInputElement>('input[type="radio"][name="answer"]');
     allBtns.forEach(btn => {
         btn.checked = false;
         btn.removeAttribute('disabled');
     });
 
-    // Gör att vi kan låsa svar igen
+    // Allows us to lock responses again
     lockAnswerBtn.removeAttribute('disabled');
 
-    // Gör att vi inte kan trycka på "gå vidare"-knapp, låses upp när vi låst ett svar
+    // Makes us unable to press onward button, unlocked when we locked an answer
     onwardBtn.setAttribute('disabled', '');
 
     if (currentQuestionIndex === 10) {
@@ -90,8 +90,8 @@ function showQuestion(): void {
         return;
     }
 
-    // Visar upp frågor med tillhörande svarsalternativ
-    // Visar antingen första arrayen eller andra
+    // Displays questions with associated answer options
+    // Displays either the first array or the second
     if (isFirstArray) {
         questionParagraph.innerHTML = `${firstArrayShuffled[currentQuestionIndex].question}`;
         optionOne.innerHTML = `${firstArrayShuffled[currentQuestionIndex].options[0].answer}`;
@@ -122,38 +122,38 @@ function showQuestion(): void {
     }
 }
 
-// ---------------------------------- Kontrollera svar ------------------------------------------
+// ---------------------------------- Check answers ------------------------------------------
 
 let score: number = 0;
 
 function checkAnswer() {
     const selectedAnswer = document.querySelector('input[name="answer"]:checked') as HTMLInputElement;
 
-    // Om inget är iklickat
+    // If nothing is clicked
     if (selectedAnswer == null) {
         return;
     }
     const isAnswerCorrect = selectedAnswer.dataset.trueOrFalse;
 
-    // Uppdaterar variabeln "score" utifrån om vi svarat rätt eller fel
+    // Updates the variable "score" based on whether we answered correctly or incorrectly
     if (isAnswerCorrect === 'true') {
         score += 1;
-        // TODO: Byt till en span istället för questionParagraph + töm/rensa denna vid ny fråga också
+        // TODO: Switch to a span instead of questionParagraph + empty/clear this for a new question as well
         questionParagraph.innerHTML = 'Du svarade rätt!';
     }
     else {
         score += 0;
-        // TODO: Byt till en span istället för questionParagraph
+        // TODO: Change to a span instead of questionParagraph
         questionParagraph.innerHTML = 'Du svarade fel!';
     }
 
-    // Gör att "Gå vidare"-knappen går att klicka på
+    // Make the "onward" button clickable
     onwardBtn.removeAttribute('disabled');
 
-    // Gör att lås-knappen inte kan tryckas på igen, och på så sätt hindra användare från att få fler poäng för samma svar
+    // Prevents the lock button from being pressed again, thus preventing users from getting more points for the same answer
     lockAnswerBtn.setAttribute('disabled', '');
 
-    // Gör att vi inte kan byta svar efter vi låst svaret
+    // Makes us unable to change answers after we lock the answer
     const allBtns = document.querySelectorAll<HTMLInputElement>('input[type="radio"][name="answer"]');
     allBtns.forEach(btn => {
         btn.setAttribute('disabled', '');
@@ -163,7 +163,7 @@ function checkAnswer() {
     selectedAnswer.checked = true;
 }
 
-// ------------------------------------ Spela igen ---------------------------------------
+// ------------------------------------ Play again ---------------------------------------
 
 function playAgain(): void {
     isFirstArray = !isFirstArray;
@@ -173,7 +173,7 @@ function playAgain(): void {
     startGame();
 }
 
-// ------------------------------------ Avsluta spel --------------------------------------
+// ------------------------------------ End game --------------------------------------
 
 function quitGame(): void {
     isFirstArray = !isFirstArray;
@@ -184,12 +184,12 @@ function quitGame(): void {
     landingPage.classList.remove('hidden');
 }
 
-// -------------------------------- Visa resultat ------------------------------------------
+// -------------------------------- Show results ------------------------------------------
 
 const resultTicket = document.querySelector('#resultTicket') as HTMLImageElement; 
 
-// Funktion för att få fram confirmation page
-// Presenterar resultat, tid och olika fraser för olika antal rätt
+// Function to bring up the confirmation page
+// Presents results, time and different phrases for different numbers of correct
 function showResultPage(): void {
     gamePage.classList.add('hidden');
     resultPage.classList.remove('hidden');

@@ -2,10 +2,10 @@
 export {timeResult, startTimer, stopTimer}
 
 
-let timeInSeconds: number = 0 // Nollställ tiden
+let timeInSeconds: number = 0 // Reset the time
 let timerInterval: number | null = null //
 const timeSpan = document.querySelector('#timeSpan') as HTMLSpanElement
-let timeResult: string // Variabel för timerresultatet
+let timeResult: string // Variable for the result of the timer
 
 function formatTime(seconds: number): string {
     const min = String(Math.floor(seconds / 60)).padStart(2, '0')
@@ -23,15 +23,15 @@ function startTimer() {
 }
 
 function timerCount() {
-    timeInSeconds++ //Ökar med 1 sekund
+    timeInSeconds++ // Increases by 1 second
     updateTimerSpan()
 }
 function updateTimerSpan() {
     timeSpan.innerHTML = formatTime(timeInSeconds)
 }
  
-// Förberett för att använda senare, STOPPAR timern (knapp: Avsluta)
-// Byt knapp
+// Prepared to use later, STOPS the timer (button: Exit)
+// Change button
 
 // const quitGameBtn = document.querySelector('#quitGameBtn') as HTMLElement
 

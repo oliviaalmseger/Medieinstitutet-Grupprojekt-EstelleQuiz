@@ -7,25 +7,24 @@ import * as progressTop from './progress-top.ts';
 //------------------------- Landing page --------------------------------
 //-----------------------------------------------------------------------
 
-// Variabel för username
+// Variable for username
 let username;
 const landingPage = document.querySelector('#landingPage') as HTMLElement;
 
-// Hämtar inputfält och start game btn
+// Fetch input field and start game btn
 const usernameInput = document.querySelector('#usernameInput') as HTMLInputElement;
 const startGameBtn = document.querySelector('#startGameBtn') as HTMLButtonElement;
 
-// Klickevent på starta spel
+// Click event on start game
 startGameBtn.addEventListener('click', startGame);
 
 //-----------------------------------------------------------------------
-//---------------------------- Starta spelet ----------------------------
+//---------------------------- Start game ----------------------------
 //-----------------------------------------------------------------------
 
 function startGame() {
     username = usernameInput.value;
     if (username.length === 0) {
-        // TODO: Kanske ge användaren feedback genom en annan metod än alert?
         alert('Du måste ange ett användarnamn!');
         return;
     }
