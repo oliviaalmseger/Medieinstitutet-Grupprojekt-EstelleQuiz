@@ -27,12 +27,15 @@ Our movie quiz is an interactive web application designed to test users' movie k
 ![Result page - Desktop](public/screenshots/resultPageDesktop.png)
 
 **Landing page - Mobile**
+
 ![Landing page - Mobile](public/screenshots/landingPageMobile.png)
 
 **Game page - Mobile**
+
 ![Game page - Mobile](public/screenshots/gamePageMobile.png)
 
 **Result page - Mobile**
+
 ![Result page - Mobile](public/screenshots/resultPageMobile.png)
 
 ## 🛠️ Features 

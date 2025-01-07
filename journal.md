@@ -1,3 +1,17 @@
+# 7/1
+Scrum-master: Valentin
+- Valentin och Lenita visar vad de gjorde i fredags med stylingen, löste problem med att svarsalternativ och knappar rör sig
+- Css är avslutad! Wohoooo
+- Svar från Jenny angående skärmläsare, vi går inte vidare med att 
+- Bilderna visas inte på resultatsidan, vi felsöker och kommer fram till att sökvägen inte stämmer så att github pages inte kan läsa in bilderna.
+-Vi rensar lite bland bilder som inte används och skriver om alt-texter. 
+- Bilderna fungerar fortfarande inte, handledning med jenni, vi testar henens tips!
+-Vi lägger in screenshots för mobile, desktop och validering i readme
+- vi mergar in allt i main och är färdiga med projektet!
+
+Att göra:
+- Ludde tar sig an att skriva om kommentarer till engelska
+
 # 3/1
 Scrum-master: Ludvig
 -vi berättar vad vi gjorde igår--> styling och presentation
