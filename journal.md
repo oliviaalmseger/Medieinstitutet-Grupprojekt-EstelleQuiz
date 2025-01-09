@@ -1,3 +1,12 @@
+# 9/1
+Scrum-master: Lenita
+  - Kolla Jennis kommentarer--> vi ändrar för att få in bilder och tar bort css-länk i html.   
+  - Bilderna på resultatsidan syns nu!!
+  - Kunna starta spelet med enter på landing page
+  - vi går igenom koden, vissa utkommenterade saker har vi glömt att ta bort. Ludvig löser det.  
+  - Gå igenom presentation och demon. 
+  - Vi läser igenom uppgiften och inser att vi är FÄRDIGA!!! Wihooooo<33
+
 # 7/1
 Scrum-master: Valentin
 - Valentin och Lenita visar vad de gjorde i fredags med stylingen, löste problem med att svarsalternativ och knappar rör sig
