@@ -138,12 +138,10 @@ function checkAnswer() {
     // Updates the variable "score" based on whether we answered correctly or incorrectly
     if (isAnswerCorrect === 'true') {
         score += 1;
-        // TODO: Switch to a span instead of questionParagraph + empty/clear this for a new question as well
         questionParagraph.innerHTML = 'Du svarade rätt!';
     }
     else {
         score += 0;
-        // TODO: Change to a span instead of questionParagraph
         questionParagraph.innerHTML = 'Du svarade fel!';
     }
 

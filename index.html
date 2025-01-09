@@ -6,10 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quizza med Estelle</title>
-  <!--This is where we can add our own Favicon
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-  -->
-  <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
@@ -77,60 +73,42 @@
     <img class="landing-page-bg" src="images/popcorn.png"
       alt="en illustration av en röd popcornhink med vita ränder. Popcornen svämmar över och några har fallit till marken"
       width="547" height="846" loading="lazy">
-
   </section>
 
   <!--Main page: GAME-->
   <main id="gamePage" class="game-page hidden">
-
     <header>
       <h2>Quizza med Estelle</h2>
-      <!--
-      <img src="assets/images/QuizEstelle_logo.png" 
-      alt="" 
-      width="700" 
-      height="382" 
-      loading="lazy">
-      -->
     </header>
-
     <img class="game-page-bg" src="images/quizza_med_estelle_bg.png"
       alt="biosalong med en stor skärm, stolar och röda gardiner som är knutna åt sidorna."
       height="1080" width="1920" loading="lazy">
-
     <div class="game-page-content">
-
       <div class="q-and-a-containers">
         <div id="questionContainer" class="question-container">
           <p id="questionParagraph" class="question-paragraph"></p>
         </div>
-
         <div id="optionsContainer" class="options-container">
           <label class="option-one">
             <input id="optionOneInput" type="radio" name="answer" required>
             <span id="optionOne"></span>
-            <!-- <span class="options-checkmark"></span> -->
           </label>
           <label class="option-two">
             <input id="optionTwoInput" type="radio" name="answer">
             <span id="optionTwo"></span>
-            <!-- <span class="options-checkmark"></span> -->
           </label>
           <label class="option-three">
             <input id="optionThreeInput" type="radio" name="answer">
             <span id="optionThree"></span>
-            <!-- <span class="options-checkmark"></span> -->
           </label>
         </div>
       </div>
-
       <div class="buttons-and-progress">
         <div id="progressTopContainer" class="progress-top-container">
           <span id="timeSpan" class="time-span"></span>
           <span id="progressBarSpan" class="amount-of-questions"></span>
         </div>
         <button id="lockAnswerBtn" class="lock-answer-btn">Lås ditt svar</button>
-
         <div id="onwardContainer" class="onward-container">
           <button id="onwardBtn" class="onward-btn">Gå vidare</button>
         </div>
@@ -145,7 +123,6 @@
     <div class="result-text-container">
       <p id="resultParagraph" class="result-paragraph"></p>
     </div>
-
     <div class="result-page-btns-container">
       <button id="playAgainBtn" class="play-again-btn">Spela igen</button>
       <button id="quitGameBtn" class="quit-game-btn">Avsluta</button>

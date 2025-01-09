@@ -18,6 +18,12 @@ const startGameBtn = document.querySelector('#startGameBtn') as HTMLButtonElemen
 // Click event on start game
 startGameBtn.addEventListener('click', startGame);
 
+usernameInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        startGame();
+    }
+});
+
 //-----------------------------------------------------------------------
 //---------------------------- Start game ----------------------------
 //-----------------------------------------------------------------------

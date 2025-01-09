@@ -30,13 +30,6 @@ function updateTimerSpan() {
     timeSpan.innerHTML = formatTime(timeInSeconds)
 }
  
-// Prepared to use later, STOPS the timer (button: Exit)
-// Change button
-
-// const quitGameBtn = document.querySelector('#quitGameBtn') as HTMLElement
-
-// quitGameBtn.addEventListener('click', stopTimer)
-
 function stopTimer() {
     if (timerInterval !== null) {
         clearInterval(timerInterval)
